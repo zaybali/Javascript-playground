@@ -1,14 +1,31 @@
 //  Synchronous 
 
+// const getUser = () => {
+//     return {
+//         user: "Zayb Ali"
+//     }
+// }
+
+// const main = () => {
+//     const userInfo = getUser();
+//     console.log({userInfo});
+// }
+
+// main();
+
+// Asynchronous
+
 const getUser = () => {
-    return {
-        user: "Zayb Ali"
-    }
+    setTimeout(() => {
+        return {
+            user: 'Zayb Ali'
+        }
+    },3000)
 }
 
 const main = () => {
     const userInfo = getUser();
-    console.log({userInfo});
+    console.log({userInfo})
 }
 
 main();
