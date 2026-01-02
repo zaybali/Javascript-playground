@@ -47,24 +47,24 @@ const getUser = (getUserSuccess) => {
     setTimeout(() => {
         getUserSuccess({
             name: 'Zayb'
-        }, 1500)
-    }) 
+        })
+    }, 1500) 
 }
 
 const getEvent = (getEventSuccess) => {
     setTimeout(() => {
         getEventSuccess({
             name: 'Portfolio building'
-        }, 500)
-    }) 
+        })
+    }, 500) 
 }
 
 getUser(function(user){
-    console.log(user);
+    console.log({user});
 })
 
 getEvent(function(event){
-    console.log(event);
+    console.log({event});
 })
 
 
