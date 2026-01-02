@@ -24,10 +24,20 @@ const getUser = (callbackFn) => {
     },3000)
 }
 
+const getUserSync = () => {
+        const userInfo = {
+            user: 'Zayb Ali'
+        };
+        return userInfo;
+}
+
 const main = () => {
     getUser(function(userInfoObj){
-        console.log(userInfoObj)
+        console.log('Async', userInfoObj)
     });
+
+    const userInfoObj = getUserSync();
+    console.log('sync',userInfoObj);
 }
 
 main();
