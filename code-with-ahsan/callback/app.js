@@ -25,8 +25,8 @@ const getUser = (callbackFn) => {
 }
 
 const main = () => {
-    getUser(function(){
-        alert('done')
+    getUser(function(userInfoObj){
+        console.log(userInfoObj)
     });
 }
 
