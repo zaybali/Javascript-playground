@@ -15,17 +15,19 @@
 
 // Asynchronous
 
-const getUser = () => {
+const getUser = (callbackFn) => {
     setTimeout(() => {
-        return {
+        const userInfo = {
             user: 'Zayb Ali'
         }
+        callbackFn(userInfo);
     },3000)
 }
 
 const main = () => {
-    const userInfo = getUser();
-    console.log({userInfo})
+    getUser(function(){
+        alert('done')
+    });
 }
 
 main();
