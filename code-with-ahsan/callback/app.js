@@ -15,32 +15,58 @@
 
 // Asynchronous
 
-const getUser = (callbackFn) => {
+// const getUser = (callbackFn) => {
+//     setTimeout(() => {
+//         const userInfo = {
+//             user: 'Zayb Ali'
+//         }
+//         callbackFn(userInfo);
+//     },3000)
+// }
+
+// const getUserSync = () => {
+//         const userInfo = {
+//             user: 'Zayb Ali'
+//         };
+//         return userInfo;
+// }
+
+// const main = () => {
+//     getUser(function(userInfoObj){
+//         console.log('Async', userInfoObj)
+//     });
+
+//     const userInfoObj = getUserSync();
+//     console.log('sync',userInfoObj);
+// }
+
+// main();
+
+
+const getUser = (getUserSuccess) => {
     setTimeout(() => {
-        const userInfo = {
-            user: 'Zayb Ali'
-        }
-        callbackFn(userInfo);
-    },3000)
+        getUserSuccess({
+            name: 'Zayb'
+        }, 1500)
+    }) 
 }
 
-const getUserSync = () => {
-        const userInfo = {
-            user: 'Zayb Ali'
-        };
-        return userInfo;
+const getEvent = (getEventSuccess) => {
+    setTimeout(() => {
+        getEventSuccess({
+            name: 'Portfolio building'
+        }, 500)
+    }) 
 }
 
-const main = () => {
-    getUser(function(userInfoObj){
-        console.log('Async', userInfoObj)
-    });
+getUser(function(user){
+    console.log(user);
+})
 
-    const userInfoObj = getUserSync();
-    console.log('sync',userInfoObj);
-}
+getEvent(function(event){
+    console.log(event);
+})
 
-main();
 
 // // const getUser = (callbackFn) => {
 // //     fetch('https://randomuser.me/api')
