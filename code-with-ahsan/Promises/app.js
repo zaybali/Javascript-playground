@@ -23,7 +23,7 @@ const ahmed = {
             console.log('recieved the book ', bookName);
             console.log('look at homework instructions ', bookName);
             console.log('write in the notebook ', bookName);
-            return mathsBookPromise;
+            return physicsBookPromise;
         }).then((bookName)=>{
             console.log('recieved the book ', bookName);
             console.log('look at homework instructions ', bookName);
