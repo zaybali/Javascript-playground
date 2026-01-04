@@ -17,20 +17,19 @@ const yaseen = {
 
 const ahmed = {
     doHomework() {
-        const mathsBookPromise = yaseen.requestMathsBook();
-        const physicsBookPromise = yaseen.requestPhysicsBook();
-        mathsBookPromise.then((bookName) => {
-            console.log('recieved the book ', bookName);
-            console.log('look at homework instructions ', bookName);
-            console.log('write in the notebook ', bookName);
-            return physicsBookPromise;
-        }).then((bookName)=>{
-            console.log('recieved the book ', bookName);
-            console.log('look at homework instructions ', bookName);
-            console.log('write in the notebook ', bookName);
-        }).then(()=>{
-            console.log('Finished homework');
-        })
+        yaseen.requestMathsBook()
+            .then((bookName) => {
+                console.log('recieved the book ', bookName);
+                console.log('look at homework instructions ', bookName);
+                console.log('write in the notebook ', bookName);
+                return yaseen.requestPhysicsBook();
+            }).then((bookName)=>{
+                console.log('recieved the book ', bookName);
+                console.log('look at homework instructions ', bookName);
+                console.log('write in the notebook ', bookName);
+            }).then(()=>{
+                console.log('Finished homework');
+            })
     },
     // doPhysicsHomework() {
     //     console.log('take out textbook');
