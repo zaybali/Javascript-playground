@@ -28,8 +28,9 @@ const ahmed = {
             console.log('recieved the book ', bookName);
             console.log('look at homework instructions ', bookName);
             console.log('write in the notebook ', bookName);
+        }).then(()=>{
+            console.log('Finished homework');
         })
-        console.log('Finished homework');
     },
     // doPhysicsHomework() {
     //     console.log('take out textbook');
