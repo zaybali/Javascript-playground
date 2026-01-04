@@ -5,18 +5,31 @@ const yaseen = {
              resolve('Maths')
            }, 5000)
         })
+    },
+    requestPhysicsBook() {
+        return new Promise((resolve, reject) => {
+           setTimeout(() =>{
+             resolve('Physics')
+           }, 2000)
+        })
     }
 }
 
 const ahmed = {
-    doMathsHomework() {
-        const bookPromise = yaseen.requestMathsBook();
-        bookPromise.then((bookName) => {
+    doHomework() {
+        const mathsBookPromise = yaseen.requestMathsBook();
+        const physicsBookPromise = yaseen.requestPhysicsBook();
+        mathsBookPromise.then((bookName) => {
             console.log('recieved the book ', bookName);
-            console.log('look at homework instructions');
-            console.log('write in the notebook');
+            console.log('look at homework instructions ', bookName);
+            console.log('write in the notebook ', bookName);
+            return mathsBookPromise;
+        }).then((bookName)=>{
+            console.log('recieved the book ', bookName);
+            console.log('look at homework instructions ', bookName);
+            console.log('write in the notebook ', bookName);
         })
-        console.log('something else');
+        console.log('Finished homework');
     },
     // doPhysicsHomework() {
     //     console.log('take out textbook');
@@ -26,4 +39,4 @@ const ahmed = {
 }
 
 // ahmed.doPhysicsHomework();
-ahmed.doMathsHomework();
+ahmed.doHomework();
