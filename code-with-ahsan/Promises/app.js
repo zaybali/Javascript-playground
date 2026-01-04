@@ -2,15 +2,15 @@ const yaseen = {
     requestMathsBook() {
         return new Promise((resolve, reject) => {
            setTimeout(() =>{
-             resolve('Maths')
-           }, 5000)
+             reject(new Error('could not resolve maths'))
+           }, 2500)
         })
     },
     requestPhysicsBook() {
         return new Promise((resolve, reject) => {
            setTimeout(() =>{
-             resolve('Physics')
-           }, 2000)
+             resolve('physics')
+           }, 1000)
         })
     }
 }
@@ -29,6 +29,8 @@ const ahmed = {
                 console.log('write in the notebook ', bookName);
             }).then(()=>{
                 console.log('Finished homework');
+            }).catch((err)=>{
+                console.log(err);
             })
     },
     // doPhysicsHomework() {
