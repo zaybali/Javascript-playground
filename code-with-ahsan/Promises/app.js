@@ -17,22 +17,22 @@ const yaseen = {
 
 const ahmed = {
     doHomework() {
-        const promises = Promise.all([
-            yaseen.requestMathsBook(),
-            yaseen.requestPhysicsBook()
-        ]);
-        console.time('executing parallel')
-        promises.then(([mathsBook, physicsBook]) =>{
-            console.timeEnd('executing parallel')
-            console.log('recieved the book ', mathsBook);
-            console.log('look at homework instructions ', mathsBook);
-            console.log('write in the notebook ', mathsBook);
-            console.log('recieved the book ', physicsBook);
-            console.log('look at homework instructions ', physicsBook);
-            console.log('write in the notebook ', physicsBook);
-        }).catch((err) => {
-            console.error(err);
-        })
+        // const promises = Promise.all([
+        //     yaseen.requestMathsBook(),
+        //     yaseen.requestPhysicsBook()
+        // ]);
+        // console.time('executing parallel')
+        // promises.then(([mathsBook, physicsBook]) =>{
+        //     console.timeEnd('executing parallel')
+        //     console.log('recieved the book ', mathsBook);
+        //     console.log('look at homework instructions ', mathsBook);
+        //     console.log('write in the notebook ', mathsBook);
+        //     console.log('recieved the book ', physicsBook);
+        //     console.log('look at homework instructions ', physicsBook);
+        //     console.log('write in the notebook ', physicsBook);
+        // }).catch((err) => {
+        //     console.error(err);
+        // })
 
 
         console.time('executing sequential')
