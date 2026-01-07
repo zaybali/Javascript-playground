@@ -35,7 +35,6 @@ const ahmed = {
         })
 
 
-        // Streak
         // console.time('executing sequential')
         // yaseen.requestMathsBook()
         //     .then((bookName) => {
