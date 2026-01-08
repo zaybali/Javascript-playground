@@ -72,7 +72,7 @@ const parent = {
         return new Promise((resolve, reject) => {
             // Simulate exam results
             setTimeout(() => {
-                const grade = 'A1'; // Daughter got A1
+                const grade = 'A1'; // when daughter got A1
                 if (grade === 'A1') {
                     resolve('Congratulations! Here is your bicycle.');
                 } else {
