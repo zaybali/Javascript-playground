@@ -65,3 +65,35 @@ const ahmed = {
 
 // ahmed.doPhysicsHomework();
 ahmed.doHomework();
+
+// Bicycle promise scenario
+const parent = {
+    buyBicycle: function() {
+        return new Promise((resolve, reject) => {
+            // Simulate exam results
+            setTimeout(() => {
+                const grade = 'A1'; // Daughter got A1
+                if (grade === 'A1') {
+                    resolve('Congratulations! Here is your bicycle.');
+                } else {
+                    reject('Sorry, no bicycle this time. Study harder!');
+                }
+            }, 3000);
+        });
+    }
+};
+
+const daughter = {
+    takeExams: function() {
+        console.log('Daughter is taking exams...');
+        parent.buyBicycle()
+            .then(message => {
+                console.log(message);
+            })
+            .catch(error => {
+                console.log(error);
+            });
+    }
+};
+
+daughter.takeExams();
