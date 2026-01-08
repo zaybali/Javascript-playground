@@ -68,7 +68,7 @@ ahmed.doHomework();
 
 // Bicycle promise scenario
 const parent = {
-    buyBicycle: function() {
+    buyBicycle() {
         return new Promise((resolve, reject) => {
             // Simulate exam results
             setTimeout(() => {
@@ -84,7 +84,7 @@ const parent = {
 };
 
 const daughter = {
-    takeExams: function() {
+    takeExams() {
         console.log('Daughter is taking exams...');
         parent.buyBicycle()
             .then(message => {
