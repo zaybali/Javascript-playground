@@ -55,12 +55,7 @@ const ahmed = {
         console.table('1')
         console.table('2')
         console.table('3')
-    },
-    // doPhysicsHomework() {
-    //     console.log('take out textbook');
-    //     console.log('look at homework instructions');
-    //     console.log('write in the notebook');
-    // }
+    }
 }
 
 // ahmed.doPhysicsHomework();
