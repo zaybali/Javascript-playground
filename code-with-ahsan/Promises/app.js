@@ -90,5 +90,4 @@ const daughter = {
             });
     }
 };
-
 daughter.takeExams();
